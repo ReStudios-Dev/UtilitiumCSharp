@@ -1,0 +1,2264 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UtilitiumC#</name>
+    </assembly>
+    <members>
+        <member name="M:org.ReStudios.utitlitium.ArrayUtils.CreateMap(System.Object[])">
+            <summary>
+            Простой способ создания даже самых сложных карт.
+            Например, если вы вводите данные: "int", 4, "str", "good game", "Custom class", new CustomClass()
+            Мы получим следующую структуру карты: {"int": 4, "str": "good game", "Custom class": CustomClass@0000}
+            </summary>
+            <param name="values">Аргументы в форме: ключ, значение, ключ, значение. Где значение может быть любым объектом, а ключ может быть строкой.</param>
+            <returns>Карта</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ArrayUtils.ToArrayList``1(``0[])">
+            <summary>
+            Простой способ создания списка из перечисления объектов
+            </summary>
+            <typeparam name="T">Тип объекта</typeparam>
+            <param name="values">Объекты...</param>
+            <returns>Список ArrayList</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ArrayUtils.RemoveSame``1(System.Collections.Generic.List{``0},org.ReStudios.utitlitium.ArrayUtils.ComparingMode)">
+            <summary>
+            Удалить элементы из списка
+            </summary>
+            <typeparam name="T">Тип списка</typeparam>
+            <param name="list">Список</param>
+            <param name="way">Что удалять</param>
+            <returns>Очищенный список</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ArrayUtils.GetRandom``1(``0[])">
+            <summary>
+            Получить случайный элемент из списка
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="list">Список</param>
+            <returns>Случайный элемент из списка. null, если список пуст</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ArrayUtils.GetRandom``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Получить случайный элемент из списка
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="list">Список</param>
+            <returns>Случайный элемент из списка. null, если список пуст</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ArrayUtils.Reverse``1(``0[])">
+            <summary>
+            Перевернуть список
+            </summary>
+            <typeparam name="T">Тип списка</typeparam>
+            <param name="arr">Список</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ArrayUtils.GetSum(System.Collections.Generic.IEnumerable{System.Single})">
+            <summary>
+            Получить сумму списка float
+            </summary>
+            <param name="floatCollection">Список float</param>
+            <returns>Сумма</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ArrayUtils.GetLastItem``1(``0[])">
+            <summary>
+            Получить последний элемент из списка
+            </summary>
+            <typeparam name="T">Тип списка</typeparam>
+            <param name="s">Список</param>
+            <returns>Последний элемент из списка</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ArrayUtils.GetLastItem``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Получить последний элемент из списка
+            </summary>
+            <typeparam name="T">Тип списка</typeparam>
+            <param name="s">Список</param>
+            <returns>Последний элемент из списка</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ArrayUtils.AddLimited``1(System.Collections.Generic.List{``0},System.Int32,``0)">
+            <summary>
+            Добавляет значение в список, ограничивая размер списка.
+            </summary>
+            <typeparam name="T">Тип элементов в списке</typeparam>
+            <param name="list">Список, в который будет добавлено значение</param>
+            <param name="limit">Максимальный предел размера списка</param>
+            <param name="value">Добавляемое значение в список</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.BetterArguments.#ctor(System.String[])">
+            <summary>
+            Пример:
+            <code>
+            public static void Main(string[] args){
+                BetterArguments ba = new BetterArguments(args);
+                // ...
+            }
+            </code>
+            </summary>
+            <param name="args">Аргументы метода Main</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Colorizium.Apply(System.String,System.String,org.ReStudios.utitlitium.Colorizium.AColorProvider,System.String)">
+            <summary>
+            Применяет цветовой провайдер к строке и возвращает ее
+            </summary>
+            <param name="str">Входная обычная строка</param>
+            <param name="prefix">Префикс для селекторов</param>
+            <param name="provider">Провайдер. Null для использования по умолчанию</param>
+            <param name="suffix">Суффикс для селекторов</param>
+            <returns>Цветизированная и стилизованная строка</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Colorizium.Rgb(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            RGB в ANSI код цвета ТЕКСТА (24 бит)
+            </summary>
+            <param name="r">Красный цвет (0-255)</param>
+            <param name="g">Зеленый цвет (0-255)</param>
+            <param name="b">Синий цвет (0-255)</param>
+            <returns>Код цвета ANSI</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Colorizium.BgRgb(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            RGB в ANSI код цвета ФОНА (24 бит)
+            </summary>
+            <param name="r">Красный цвет (0-255)</param>
+            <param name="g">Зеленый цвет (0-255)</param>
+            <param name="b">Синий цвет (0-255)</param>
+            <returns>Код цвета ANSI</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Colorizium.Rgb(System.Boolean,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            RGB в ANSI код цвета (24 бит)
+            </summary>
+            <param name="foreground">Это передний план (цвет текста или цвет фона)</param>
+            <param name="r">Красный цвет (0-255)</param>
+            <param name="g">Зеленый цвет (0-255)</param>
+            <param name="b">Синий цвет (0-255)</param>
+            <returns>Код цвета ANSI</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Colorizium.Reset">
+            <summary>
+            ANSI код сброса цвета
+            </summary>
+            <returns>ANSI код</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Colorizium.Bold">
+            <summary>
+            ANSI код стиля жирного текста
+            </summary>
+            <returns>ANSI код</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Colorizium.Italic">
+            <summary>
+            ANSI код стиля курсивного текста
+            </summary>
+            <returns>ANSI код</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Colorizium.Underline">
+            <summary>
+            ANSI код стиля подчеркнутого текста
+            </summary>
+            <returns>ANSI код</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Colorizium.Strikethrough">
+            <summary>
+            ANSI код стиля зачеркнутого текста
+            </summary>
+            <returns>ANSI код</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Colorizium.Framed">
+            <summary>
+            ANSI код стиля рамки вокруг текста
+            </summary>
+            <returns>ANSI код</returns>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.Colorizium.AColorProvider">
+            <summary>
+            Абстрактный цветовой провайдер
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Colorizium.AColorProvider.GetColors">
+            <summary>
+            Получить список строк цвета.
+            </summary>
+            <returns>Список строк цвета</returns>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.Colorizium.Style">
+            <summary>
+            Перечисление стилей
+            </summary>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.Colorizium.Line">
+            <summary>
+            Абстрактный элемент для списка цветового провайдера
+            </summary>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.Colorizium.Line.String">
+            <summary>
+            Селектор.
+            </summary>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.Colorizium.ResetLine">
+            <summary>
+            Сброс всех цветов и стилей. Текст после этой строки будет по умолчанию (обычно обычный белый)
+            </summary>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.Colorizium.ColorLine">
+            <summary>
+            Сделать все следующие символы специальным цветом переднего или заднего плана
+            </summary>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.Colorizium.StyleLine">
+            <summary>
+            Сделать все следующие символы специальным стилем: жирный, курсив, подчеркнутый, зачеркнутый или рамочный
+            </summary>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.Colorizium.ColorProvider">
+            <summary>
+            Провайдер цвета. Содержит пары селекторов и строк (замена для селектора)
+            </summary>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.DataChannel">
+            <summary>
+            Класс для работы с каналом данных
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.#ctor(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            Конструктор для канала данных с выходным и входным потоком
+            </summary>
+            <param name="os">Выходной поток</param>
+            <param name="isStream">Входной поток</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.#ctor(System.IO.Stream)">
+            <summary>
+            Конструктор для канала данных с выходным потоком
+            </summary>
+            <param name="os">Выходной поток</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.#ctor">
+            <summary>
+            Пустой конструктор
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.ReadInputStream(System.IO.Stream)">
+            <summary>
+            Чтение входного потока в строку
+            </summary>
+            <param name="isStream">Входной поток</param>
+            <returns>Прочитанная строка</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.GetOutputStream">
+            <summary>
+            Получить выходной поток
+            </summary>
+            <returns>Выходной поток</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.GetInputStream">
+            <summary>
+            Получить входной поток
+            </summary>
+            <returns>Входной поток</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.Write(System.String)">
+            <summary>
+            Записать строку в выходной поток
+            </summary>
+            <param name="str">Строка для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.Write(System.Int32)">
+            <summary>
+            Записать целое число в выходной поток
+            </summary>
+            <param name="b">Целое число для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.Write(System.Byte[])">
+            <summary>
+            Записать массив байтов в выходной поток
+            </summary>
+            <param name="b">Массив байтов для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Записать массив байтов в выходной поток, начиная с определенной позиции и указанной длиной
+            </summary>
+            <param name="b">Массив байтов для записи</param>
+            <param name="off">Начальное смещение в массиве</param>
+            <param name="len">Количество байтов для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.Flush">
+            <summary>
+            Промывка выходного потока для приема входящих данных
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.Read">
+            <summary>
+            Прочитать следующий байт из потока
+            </summary>
+            <returns>Следующий байт потока, или -1, если поток достиг конца</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.Read(System.Byte[])">
+            <summary>
+            Прочитать данные и сохранить их непосредственно в массив байтов
+            </summary>
+            <param name="b">Массив байтов для сохранения данных</param>
+            <returns>Количество прочитанных байтов, или -1, если не было прочитано ни одного байта</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Прочитать данные и сохранить их непосредственно в массив байтов, начиная с определенной позиции и указанной длиной
+            </summary>
+            <param name="b">Массив байтов для сохранения данных</param>
+            <param name="off">Начальное смещение в массиве</param>
+            <param name="len">Максимальное количество байтов для чтения</param>
+            <returns>Количество прочитанных байтов, или -1, если не было прочитано ни одного байта</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.Skip(System.Int64)">
+            <summary>
+            Пропустить и отбросить n байтов данных из этого входного потока. Метод Skip может по разным причинам пропустить некоторое меньшее количество байтов, возможно, 0. Это может произойти из-за любого из нескольких условий; достижение конца файла до пропуска n байтов - только одна из возможностей. Фактическое количество пропущенных байтов возвращается. Если n отрицательно, метод Skip для класса InputStream всегда возвращает 0, и ни один байт не пропускается. Подклассы могут обрабатывать отрицательное значение по-разному.
+            </summary>
+            <param name="n">Количество байтов для пропуска</param>
+            <returns>Фактическое количество пропущенных байтов</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.AvailableInput">
+            <summary>
+            Получить количество доступных байтов для ввода
+            </summary>
+            <returns>Количество доступных байтов для ввода</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.CloseInput">
+            <summary>
+            Закрыть входной поток
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.CloseOutput">
+            <summary>
+            Закрыть выходной поток
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.Close">
+            <summary>
+            Закрыть входной и выходной потоки
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.Transfer">
+            <summary>
+            Передать данные из входного в выходной поток
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.DataChannel.Dispose">
+            <summary>
+            Освобождает неуправляемые ресурсы, используемые объектом DataChannel, и необязательно освобождает управляемые ресурсы.
+            </summary>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.InstanceManager">
+            <summary>
+            Менеджер экземпляров
+            </summary>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.InstanceManager.instances">
+            <summary>
+            Список экземпляров
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.InstanceManager.Register(System.Object)">
+            <summary>
+            Регистрация нового экземпляра
+            </summary>
+            <param name="instance">Экземпляр для регистрации</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.InstanceManager.GetInstance``1">
+            <summary>
+            Получить экземпляр
+            </summary>
+            <typeparam name="T">Родительский тип экземпляра</typeparam>
+            <returns>Экземпляр класса</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.InstanceManager.HasInstance(System.Type)">
+            <summary>
+            Проверка наличия экземпляра указанного класса
+            </summary>
+            <param name="type">Указанный класс</param>
+            <returns>True, если экземпляр существует, иначе False</returns>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.Logger">
+            <summary>
+            Класс для логирования
+            </summary>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.Logger.isErrorStream">
+            <summary>
+            Флаг, указывающий на поток ошибок
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.#ctor(System.IO.TextWriter)">
+            <summary>
+            Инициализирует новый экземпляр класса <see cref="T:org.ReStudios.utitlitium.Logger"/>
+            </summary>
+            <param name="writer">Исходный поток</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.#ctor(System.IO.TextWriter,org.ReStudios.utitlitium.Colorizium.AColorProvider,System.String,System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса <see cref="T:org.ReStudios.utitlitium.Logger"/> с поддержкой цветов
+            </summary>
+            <param name="writer">Исходный поток</param>
+            <param name="colorProvider">Провайдер цветов</param>
+            <param name="colorPrefix">Префикс цвета</param>
+            <param name="colorSuffix">Суффикс цвета</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.Write(System.String)">
+            <summary>
+            Записывает строку в поток вывода
+            </summary>
+            <param name="value">Строка для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.Write(System.Int32)">
+            <summary>
+            Записывает значение int в поток вывода
+            </summary>
+            <param name="value">Значение для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.Write(System.Double)">
+            <summary>
+            Записывает значение double в поток вывода
+            </summary>
+            <param name="value">Значение для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.Write(System.Char)">
+            <summary>
+            Записывает символ в поток вывода
+            </summary>
+            <param name="value">Символ для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.Write(System.Int64)">
+            <summary>
+            Записывает значение long в поток вывода
+            </summary>
+            <param name="value">Значение для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.Write(System.Single)">
+            <summary>
+            Записывает значение float в поток вывода
+            </summary>
+            <param name="value">Значение для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.Write(System.Boolean)">
+            <summary>
+            Записывает значение bool в поток вывода
+            </summary>
+            <param name="value">Значение для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.Write(System.Object)">
+            <summary>
+            Записывает объект в поток вывода
+            </summary>
+            <param name="value">Объект для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.Write(System.Char[])">
+            <summary>
+            Записывает массив символов в поток вывода
+            </summary>
+            <param name="buffer">Массив символов для записи</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.SetupPrints(System.String,org.ReStudios.utitlitium.Colorizium.AColorProvider,System.String)">
+            <summary>
+            Настраивает цветной вывод
+            </summary>
+            <param name="colorPrefix">Префикс цвета</param>
+            <param name="provider">Провайдер цвета (может быть null для использования по умолчанию)</param>
+            <param name="colorSuffix">Суффикс цвета</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.SetupPrints">
+            <summary>
+            Настраивает обычный вывод
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Logger.UnhandledException(System.Object,System.UnhandledExceptionEventArgs)">
+            <summary>
+            Обработчик необработанных исключений
+            </summary>
+            <param name="sender">Отправитель</param>
+            <param name="e">Аргументы исключения</param>
+        </member>
+        <member name="P:org.ReStudios.utitlitium.Logger.Encoding">
+            <summary>
+            Кодировка потока
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.Clamp(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Ограничивает значение в заданном диапазоне.
+            </summary>
+            <param name="min">Минимальное значение</param>
+            <param name="max">Максимальное значение</param>
+            <param name="val">Текущее значение</param>
+            <returns>Значение в пределах диапазона</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.Clamp(System.Single,System.Single,System.Single)">
+            <summary>
+            Ограничивает значение в заданном диапазоне.
+            </summary>
+            <param name="min">Минимальное значение</param>
+            <param name="max">Максимальное значение</param>
+            <param name="val">Текущее значение</param>
+            <returns>Значение в пределах диапазона</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.Clamp(System.Double,System.Double,System.Double)">
+            <summary>
+            Ограничивает значение в заданном диапазоне.
+            </summary>
+            <param name="min">Минимальное значение</param>
+            <param name="max">Максимальное значение</param>
+            <param name="val">Текущее значение</param>
+            <returns>Значение в пределах диапазона</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.Map(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Преобразует число из одного диапазона в другой (из <a href="https://www.arduino.cc/reference/en/language/functions/math/map">arduino</a>).
+            </summary>
+            <param name="x">Текущее значение</param>
+            <param name="in_min">Минимальное значение входного диапазона</param>
+            <param name="in_max">Максимальное значение входного диапазона</param>
+            <param name="out_min">Минимальное значение выходного диапазона</param>
+            <param name="out_max">Максимальное значение выходного диапазона</param>
+            <returns>Преобразованное значение</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.Map(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Преобразует число из одного диапазона в другой (из <a href="https://www.arduino.cc/reference/en/language/functions/math/map">arduino</a>).
+            </summary>
+            <param name="x">Текущее значение</param>
+            <param name="in_min">Минимальное значение входного диапазона</param>
+            <param name="in_max">Максимальное значение входного диапазона</param>
+            <param name="out_min">Минимальное значение выходного диапазона</param>
+            <param name="out_max">Максимальное значение выходного диапазона</param>
+            <returns>Преобразованное значение</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.Map(System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Преобразует число из одного диапазона в другой (из <a href="https://www.arduino.cc/reference/en/language/functions/math/map">arduino</a>).
+            </summary>
+            <param name="x">Текущее значение</param>
+            <param name="in_min">Минимальное значение входного диапазона</param>
+            <param name="in_max">Максимальное значение входного диапазона</param>
+            <param name="out_min">Минимальное значение выходного диапазона</param>
+            <param name="out_max">Максимальное значение выходного диапазона</param>
+            <returns>Преобразованное значение</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.Map(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Преобразует число из одного диапазона в другой (из <a href="https://www.arduino.cc/reference/en/language/functions/math/map">arduino</a>).
+            </summary>
+            <param name="x">Текущее значение</param>
+            <param name="in_min">Минимальное значение входного диапазона</param>
+            <param name="in_max">Максимальное значение входного диапазона</param>
+            <param name="out_min">Минимальное значение выходного диапазона</param>
+            <param name="out_max">Максимальное значение выходного диапазона</param>
+            <returns>Преобразованное значение</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.GetPositionFromDistanceRotation(org.ReStudios.utitlitium.vectors.Vector2f,System.Single,System.Single)">
+            <summary>
+            Эта функция принимает набор координат XY, расстояние и аргумент поворота.
+            Она возвращает координаты XY точки, которая находится на заданном расстоянии
+            от заданной точки, в заданном направлении.
+            </summary>
+            <param name="point">Начальная позиция</param>
+            <param name="distance">Расстояние до выходной позиции</param>
+            <param name="angle">Направление к выходной позиции</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.GetAverageValue(System.Collections.Generic.List{System.Single})">
+            <summary>
+            Получает среднее значение из списка float.
+            </summary>
+            <param name="floatValues">Список float</param>
+            <returns>Среднее значение</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.Factorial(System.Int32)">
+            <summary>
+            Получает факториал числа.
+            </summary>
+            <param name="x">Входное число</param>
+            <returns>Факториал</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.C(System.Int32,System.Int32)">
+            <summary>
+            Функция для вычисления биномиального коэффициента C(n, r).
+            </summary>
+            <param name="n">Число n</param>
+            <param name="r">Число r</param>
+            <returns>Биномиальный коэффициент C(n, r)</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.GetBezierPoint(org.ReStudios.utitlitium.vectors.Vector2d[],System.Double)">
+            <summary>
+            Функция для вычисления точки на кривой Безье.
+            <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">Кривая Безье</a>
+            </summary>
+            <param name="points">Точки</param>
+            <param name="t">Текущее время (0.0 - 1.0)</param>
+            <returns>Текущая точка</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.RadianToDegree(System.Double)">
+            <summary>
+            Преобразует угол из радиан в градусы.
+            </summary>
+            <param name="inRads">Угол в радианах</param>
+            <returns>Угол в градусах</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.MathUtils.DegreeToRadian(System.Single)">
+            <summary>
+            Преобразует угол из градусов в радианы.
+            </summary>
+            <param name="v">Угол в градусах</param>
+            <returns>Угол в радианах</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.IsFloat(System.String)">
+            <summary>
+            Проверяет, является ли строка числом с плавающей запятой.
+            </summary>
+            <param name="s">Потенциальная строка с числом с плавающей запятой</param>
+            <returns>true, если строка является числом с плавающей запятой</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.IsInteger(System.String)">
+            <summary>
+            Проверяет, является ли строка целым числом.
+            </summary>
+            <param name="s">Потенциальная строка с целым числом</param>
+            <returns>true, если строка является целым числом</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.ParseInteger(System.String)">
+            <summary>
+            Безопасное преобразование строки в целое число.
+            </summary>
+            <param name="s">Строка, содержащая целое число</param>
+            <returns>Преобразованное целое число из строки или 0</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.ParseDouble(System.String)">
+            <summary>
+            Безопасное преобразование строки в число с плавающей запятой.
+            </summary>
+            <param name="s">Строка, содержащая число с плавающей запятой</param>
+            <returns>Преобразованное число с плавающей запятой из строки или 0.0d</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.ParseFloat(System.String)">
+            <summary>
+            Безопасное преобразование строки в число с плавающей запятой.
+            </summary>
+            <param name="s">Строка, содержащая число с плавающей запятой</param>
+            <returns>Преобразованное число с плавающей запятой из строки или 0</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.ParseInteger(System.String,System.Int32)">
+            <summary>
+            Безопасное преобразование строки в целое число с указанием значения по умолчанию.
+            </summary>
+            <param name="s">Строка, содержащая целое число</param>
+            <param name="defaultValue">Значение по умолчанию, если строка содержит недопустимое целое число</param>
+            <returns>Преобразованное целое число из строки или значение по умолчанию</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.ParseDouble(System.String,System.Double)">
+            <summary>
+            Безопасное преобразование строки в число с плавающей запятой с указанием значения по умолчанию.
+            </summary>
+            <param name="s">Строка, содержащая число с плавающей запятой</param>
+            <param name="defaultValue">Значение по умолчанию, если строка содержит недопустимое число с плавающей запятой</param>
+            <returns>Преобразованное число с плавающей запятой из строки или значение по умолчанию</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.ParseFloat(System.String,System.Single)">
+            <summary>
+            Безопасное преобразование строки в число с плавающей запятой с указанием значения по умолчанию.
+            </summary>
+            <param name="s">Строка, содержащая число с плавающей запятой</param>
+            <param name="defaultValue">Значение по умолчанию, если строка содержит недопустимое число с плавающей запятой</param>
+            <returns>Преобразованное число с плавающей запятой из строки или значение по умолчанию</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.Reverse(System.String)">
+            <summary>
+            Переворачивает предоставленную строку.
+            </summary>
+            <param name="s">Строка для переворачивания</param>
+            <returns>Перевернутая строка</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.CharacterUp(System.Int32,System.String)">
+            <summary>
+            Устанавливает символ в указанной позиции в верхний регистр.
+            </summary>
+            <param name="index">Индекс символа</param>
+            <param name="s">Строка</param>
+            <returns>Строка с примененными изменениями</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.CharsUp(System.String,System.Int32[])">
+            <summary>
+            Устанавливает все символы из массива индексов в верхний регистр.
+            </summary>
+            <param name="s">Строка для применения изменений</param>
+            <param name="ints">Индексы</param>
+            <returns>Строка с примененными изменениями</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.Md5(System.String)">
+            <summary>
+            Хеширует строку с использованием алгоритма MD5.
+            </summary>
+            <param name="str">Строка для хеширования</param>
+            <returns>Хешированная строка</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.StringUtils.FirstCharUp(System.String)">
+            <summary>
+            Устанавливает первый символ строки в верхний регистр.
+            </summary>
+            <param name="s">Строка</param>
+            <returns>Строка, но первый символ в верхнем регистре</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ThreadBuilder.SetPriority(System.Int32)">
+            <summary>
+            Устанавливает приоритет потока
+            </summary>
+            <param name="priority">Приоритет, который нужно установить</param>
+            <returns>Экземпляр класса ThreadBuilder</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ThreadBuilder.SetName(System.String)">
+            <summary>
+            Устанавливает имя потока
+            </summary>
+            <param name="name">Имя, которое нужно установить</param>
+            <returns>Экземпляр класса ThreadBuilder</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ThreadBuilder.BuildAndRun">
+            <summary>
+            Строит поток с примененными параметрами и запускает его
+            </summary>
+            <returns>Поток с примененными параметрами</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.ThreadBuilder.SetupPrints">
+            <summary>
+            Настройка вывода в логгер
+            </summary>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.Timer">
+            <summary>
+            Представляет таймер для измерения времени выполнения задач.
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Timer.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса <see cref="T:org.ReStudios.utitlitium.Timer"/>.
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Timer.Run">
+            <summary>
+            Запускает таймер.
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Timer.Step">
+            <summary>
+            Добавляет новый шаг в таймер.
+            </summary>
+            <returns>Объект <see cref="T:org.ReStudios.utitlitium.Timer.StepData"/>, представляющий информацию о шаге таймера.</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Timer.Total">
+            <summary>
+            Возвращает общее время работы таймера.
+            </summary>
+            <returns>Общее время работы таймера в миллисекундах.</returns>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.Timer.StepData">
+            <summary>
+            Представляет информацию о шаге таймера.
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Timer.StepData.#ctor(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Инициализирует новый экземпляр класса <see cref="T:org.ReStudios.utitlitium.Timer.StepData"/>.
+            </summary>
+            <param name="startTime">Время начала шага в миллисекундах.</param>
+            <param name="stepBefore">Время начала предыдущего шага в миллисекундах.</param>
+            <param name="finishTime">Время окончания шага в миллисекундах.</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Timer.StepData.Relative">
+            <summary>
+            Возвращает относительное время выполнения шага.
+            </summary>
+            <returns>Относительное время выполнения шага в миллисекундах.</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Timer.StepData.Absolute">
+            <summary>
+            Возвращает абсолютное время выполнения шага.
+            </summary>
+            <returns>Абсолютное время выполнения шага в миллисекундах.</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Timer.StepData.Equals(System.Object)">
+            <summary>
+            Определяет, равен ли указанный объект текущему объекту.
+            </summary>
+            <param name="obj">Объект для сравнения.</param>
+            <returns>Значение true, если указанный объект равен текущему объекту; в противном случае — значение false.</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Timer.StepData.GetHashCode">
+            <summary>
+            Возвращает хэш-код для текущего объекта.
+            </summary>
+            <returns>Хэш-код для текущего объекта.</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Timer.StepData.ToString">
+            <summary>
+            Возвращает строковое представление объекта.
+            </summary>
+            <returns>Строковое представление объекта.</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Utilitium.CastOrNull``1(System.Type,System.Object)">
+            <summary>
+            Приводит объект к указанному типу.
+            </summary>
+            <typeparam name="T">Параметр типа</typeparam>
+            <param name="clazz">Тип, к которому необходимо привести объект</param>
+            <param name="obj">Объект, который необходимо привести</param>
+            <returns>Приведенный объект или null</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Utilitium.GetCaller(System.Int32)">
+            <summary>
+            Возвращает вызывающий метод.
+            </summary>
+            <param name="depth">Глубина поиска</param>
+            <returns>Вызывающий метод</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.Utilitium.SafeEquals(System.Object,System.Object)">
+            <summary>
+            Выполняет безопасную проверку на равенство.
+            </summary>
+            <param name="a">Объект A</param>
+            <param name="b">Объект B</param>
+            <returns>True, если объекты равны, иначе false</returns>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.vectors.Vector2d.x">
+            <summary>
+            X и Y значения
+            </summary>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.vectors.Vector2d.y">
+            <summary>
+            X и Y значения
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.#ctor">
+            <summary>
+            Конструктор по умолчанию
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.#ctor(System.Double,System.Double)">
+            <summary>
+            Конструктор с пользовательскими значениями
+            </summary>
+            <param name="x">X значение</param>
+            <param name="y">Y значение</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.GetX">
+            <summary>
+            Получить X значение
+            </summary>
+            <returns>X значение</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.SetX(System.Double)">
+            <summary>
+            Установить пользовательское значение X
+            </summary>
+            <param name="x">новое значение X</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.GetY">
+            <summary>
+            Получить Y значение
+            </summary>
+            <returns>Y значение</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.SetY(System.Double)">
+            <summary>
+            Установить пользовательское значение Y
+            </summary>
+            <param name="y">новое значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Add(org.ReStudios.utitlitium.vectors.Vector2d)">
+            <summary>
+            Добавить значения из другого вектора
+            </summary>
+            <param name="v">другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Add(System.Double,System.Double)">
+            <summary>
+            Добавить значения из прямых значений
+            </summary>
+            <param name="x">добавить значение X</param>
+            <param name="y">добавить значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Add(System.Double)">
+            <summary>
+            Добавить значение ко всем значениям вектора
+            </summary>
+            <param name="add">значение для добавления</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Sub(org.ReStudios.utitlitium.vectors.Vector2d)">
+            <summary>
+            Вычесть значения из другого вектора
+            </summary>
+            <param name="v">другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Sub(System.Double,System.Double)">
+            <summary>
+            Вычесть значения из прямых значений
+            </summary>
+            <param name="x">вычесть значение X</param>
+            <param name="y">вычесть значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Sub(System.Double)">
+            <summary>
+            Вычесть значение из всех значений вектора
+            </summary>
+            <param name="sub">значение для вычитания</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Mul(org.ReStudios.utitlitium.vectors.Vector2d)">
+            <summary>
+            Умножить значения на другой вектор
+            </summary>
+            <param name="v">другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Mul(System.Double,System.Double)">
+            <summary>
+            Умножить значения на прямые значения
+            </summary>
+            <param name="x">умножить значение X</param>
+            <param name="y">умножить значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Mul(System.Double)">
+            <summary>
+            Умножить значения на одно значение
+            </summary>
+            <param name="mul">значение для умножения</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Div(org.ReStudios.utitlitium.vectors.Vector2d)">
+            <summary>
+            Разделить значения на другой вектор
+            </summary>
+            <param name="v">другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Div(System.Double,System.Double)">
+            <summary>
+            Разделить значения на прямые значения
+            </summary>
+            <param name="x">разделить значение X</param>
+            <param name="y">разделить значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Div(System.Double)">
+            <summary>
+            Разделить значения на одно значение
+            </summary>
+            <param name="div">значение для деления</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Pow(org.ReStudios.utitlitium.vectors.Vector2d)">
+            <summary>
+            Возвести в степень текущий вектор значения из другого вектора
+            </summary>
+            <param name="v">другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Pow(System.Double,System.Double)">
+            <summary>
+            Возвести в степень значения из прямых значений
+            </summary>
+            <param name="x">возвести в степень значение X</param>
+            <param name="y">возвести в степень значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Pow(System.Double)">
+            <summary>
+            Возвести в степень значения из одного значения
+            </summary>
+            <param name="pow">значение для возведения в степень</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Clone">
+            <summary>
+            Клонировать текущий вектор
+            </summary>
+            <returns>Экземпляр скопированного вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Normalize">
+            <summary>
+            Нормализовать вектор
+            </summary>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.ToString">
+            <summary>
+            Преобразовать вектор в строку
+            </summary>
+            <returns>Строковое представление вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.SerializeToString">
+            <summary>
+            Сериализовать вектор в строку
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.SerializeToMap">
+            <summary>
+            Сериализовать вектор в словарь
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.SerializeToBytes(System.Text.Encoding)">
+            <summary>
+            Сериализовать вектор в список байт
+            </summary>
+            <param name="charset">Пользовательская кодировка</param>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.SerializeToBytes">
+            <summary>
+            Сериализовать вектор в список байт с кодировкой по умолчанию (UTF-8)
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.DeserializeFromBytes(System.Byte[])">
+            <summary>
+            Десериализовать список байт в класс Vector
+            </summary>
+            <param name="bytes">список байт</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.DeserializeFromMap(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Десериализовать словарь в класс Vector
+            </summary>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.DeserializeFromString(System.String)">
+            <summary>
+            Десериализовать строку в класс Vector
+            </summary>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.asJavaPoint">
+            <summary>
+            Преобразовать вектор в объект Point2D Java
+            </summary>
+            <returns>Java Point</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.GetAngle(org.ReStudios.utitlitium.vectors.Vector2d)">
+            <summary>
+            Получить угол относительно этого вектора,
+            где 3 часа - это 0, а 12 часов - 270 градусов
+            </summary>
+            <param name="to">Вектор для поворота</param>
+            <returns>угол в градусах от 0 до 360.</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.GetPositionFromDistanceRotation(System.Single,System.Single)">
+            <summary>
+            Эта функция принимает набор XY-координат, расстояние и аргумент вращения.
+            Она возвращает XY-координаты точки, которая находится на заданном расстоянии
+            от данной точки в заданном направлении.
+            </summary>
+            <param name="distance">Расстояние до выходной позиции</param>
+            <param name="angle">направление к выходной позиции</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Distance(org.ReStudios.utitlitium.vectors.Vector2d)">
+            <summary>
+            Получить расстояние между 2 векторами
+            </summary>
+            <param name="vector">Другой вектор</param>
+            <returns>Расстояние</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2d.Length">
+            <summary>
+            Получить длину вектора (расстояние от начала координат)
+            </summary>
+            <returns>Длина</returns>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.vectors.Vector2f.x">
+            <summary>
+            Значения X и Y
+            </summary>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.vectors.Vector2f.y">
+            <summary>
+            Значения X и Y
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.#ctor">
+            <summary>
+            Конструктор с значениями по умолчанию
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.#ctor(System.Single,System.Single)">
+            <summary>
+            Конструктор с пользовательскими значениями
+            </summary>
+            <param name="x">Значение X</param>
+            <param name="y">Значение Y</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.GetX">
+            <summary>
+            Получить значение X
+            </summary>
+            <returns>Значение X</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.SetX(System.Single)">
+            <summary>
+            Установить пользовательское значение X
+            </summary>
+            <param name="x">Новое значение X</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.GetY">
+            <summary>
+            Получить значение Y
+            </summary>
+            <returns>Значение Y</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.SetY(System.Single)">
+            <summary>
+            Установить пользовательское значение Y
+            </summary>
+            <param name="y">Новое значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Add(org.ReStudios.utitlitium.vectors.Vector2f)">
+            <summary>
+            Добавить значения из другого вектора
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Add(System.Single,System.Single)">
+            <summary>
+            Добавить значения из прямых значений
+            </summary>
+            <param name="x">Добавить значение X</param>
+            <param name="y">Добавить значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Add(System.Single)">
+            <summary>
+            Добавить значения из 1 значения.
+            Добавить значение ко всем значениям вектора.
+            Например: Представим, что у нас есть вектор со значениями 5 и 8,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 7 и 10
+            </summary>
+            <param name="add">Значение для добавления</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Sub(org.ReStudios.utitlitium.vectors.Vector2f)">
+            <summary>
+            Вычесть значения из другого вектора
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Sub(System.Single,System.Single)">
+            <summary>
+            Вычесть значения из прямых значений
+            </summary>
+            <param name="x">Вычесть значение X</param>
+            <param name="y">Вычесть значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Sub(System.Single)">
+            <summary>
+            Вычесть значения из 1 значения.
+            Вычесть значение из всех значений вектора.
+            Например: Представим, что у нас есть вектор со значениями 5 и 8,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 3 и 6
+            </summary>
+            <param name="sub">Значение для вычитания</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Mul(org.ReStudios.utitlitium.vectors.Vector2f)">
+            <summary>
+            Умножить значения на другой вектор
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Mul(System.Single,System.Single)">
+            <summary>
+            Умножить значения на прямые значения
+            </summary>
+            <param name="x">Умножить значение X</param>
+            <param name="y">Умножить значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Mul(System.Single)">
+            <summary>
+            Умножить значения на 1 значение.
+            Умножить значение на все значения вектора.
+            Например: Представим, что у нас есть вектор со значениями 5 и 8,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 10 и 16
+            </summary>
+            <param name="mul">Значение для умножения</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Div(org.ReStudios.utitlitium.vectors.Vector2f)">
+            <summary>
+            Разделить значения на другой вектор
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Div(System.Single,System.Single)">
+            <summary>
+            Разделить значения на прямые значения
+            </summary>
+            <param name="x">Разделить значение X</param>
+            <param name="y">Разделить значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Div(System.Single)">
+            <summary>
+            Разделить значения на 1 значение.
+            Разделить значение на все значения вектора.
+            Например: Представим, что у нас есть вектор со значениями 4 и 8,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 2 и 4
+            </summary>
+            <param name="div">Значение для деления</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Pow(org.ReStudios.utitlitium.vectors.Vector2f)">
+            <summary>
+            Возвести в степень текущий вектор к значениям другого вектора
+            (X текущего вектора возводится в степень значения X другого вектора,
+            и так далее с остальными значениями)
+            </summary>
+            <param name="v">другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Pow(System.Single,System.Single)">
+            <summary>
+            Возвести в степень из прямых значений
+            </summary>
+            <param name="x">степень значения X</param>
+            <param name="y">степень значения Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Pow(System.Single)">
+            <summary>
+            Возвести в степень значения 1.
+            Возвести в степень значение ко всем значениям вектора.
+            Например: Представим, что у нас есть вектор со значениями 4 и 8,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 16 и 64
+            *Другими словами: x = x^pow*
+            </summary>
+            <param name="pow">Значение для возведения в степень</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Clone">
+            <summary>
+            Клонировать текущий вектор
+            Создаст точно такой же вектор, но как отдельный объект.
+            Это полезно, если вам нужно сохранить значения, если вы их позже измените (например).
+            </summary>
+            <returns>Экземпляр скопированного вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Normalize">
+            <summary>
+            Любой вектор, нормализованный, изменяет только свою величину, а не направление.
+            Кроме того, каждый вектор, указывающий в том же направлении, нормализуется до того же вектора
+            (потому что величина и направление уникально определяют вектор).
+            Другими словами, делит вектор на минимальные значения, которые приводят вектор к "направлению"
+            </summary>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.ToString">
+            <summary>
+            Преобразовать вектор в строку
+            Например, полезно для отладки
+            </summary>
+            <returns>Строковый вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.SerializeToString">
+            <summary>
+            Преобразовать вектор в сериализованную строку
+            Например, для хранения за пределами приложения
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.SerializeToMap">
+            <summary>
+            Преобразовать вектор в словарь
+            Например, для хранения за пределами приложения
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.SerializeToBytes(System.Text.Encoding)">
+            <summary>
+            Преобразовать вектор в список байтов
+            Например, для хранения за пределами приложения
+            </summary>
+            <param name="charset">Пользовательский набор символов</param>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.SerializeToBytes">
+            <summary>
+            Преобразовать вектор в список байтов с использованием кодировки по умолчанию (UTF-8)
+            Например, для хранения за пределами приложения
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.DeserializeFromBytes(System.Byte[])">
+            <summary>
+            Десериализовать список байтов в класс Vector
+            </summary>
+            <param name="bytes">Список байтов</param>
+            <returns>Экземпляр вектора</returns>
+            <exception cref="T:org.ReStudios.utitlitium.vectors.DeserializeException">Недопустимое или неправильное значение списка байтов</exception>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.DeserializeFromMap(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Десериализовать список карт в класс Vector
+            </summary>
+            <returns>Экземпляр вектора</returns>
+            <exception cref="T:org.ReStudios.utitlitium.vectors.DeserializeException">Недопустимый или неправильный словарь или его значения</exception>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.DeserializeFromString(System.String)">
+            <summary>
+            Десериализовать строку в класс Vector
+            </summary>
+            <param name="str">Строковое значение</param>
+            <returns>Экземпляр вектора</returns>
+            <exception cref="T:org.ReStudios.utitlitium.vectors.DeserializeException">Недопустимое или неправильное строковое значение</exception>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.AsJavaPoint">
+            <summary>
+            Преобразовать вектор в java Point2D
+            </summary>
+            <returns>Java Point</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.GetAngle(org.ReStudios.utitlitium.vectors.Vector2f)">
+            <summary>
+            Получить угол относительно этого вектора
+            где 3 часа - 0, а 12 часов - 270 градусов
+            </summary>
+            <param name="to">Вектор для вращения</param>
+            <returns>Угол в градусах от 0 до 360.</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.GetPositionFromDistanceRotation(System.Single,System.Single)">
+            <summary>
+            Эта функция принимает набор координат XY, расстояние и аргумент поворота.
+            Он возвращает XY-координаты точки, которая находится на заданном расстоянии
+            от заданной точки, в заданном направлении.
+            </summary>
+            <param name="distance">Расстояние до позиции вывода</param>
+            <param name="angle">направление к позиции вывода</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Distance(org.ReStudios.utitlitium.vectors.Vector2f)">
+            <summary>
+            Получить расстояние между 2 векторами
+            </summary>
+            <param name="vector">Другой вектор</param>
+            <returns>Расстояние</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector2f.Length">
+            <summary>
+            Получить длину вектора (расстояние от начала координат)
+            </summary>
+            <returns>Длина</returns>
+        </member>
+        <member name="T:org.ReStudios.utitlitium.vectors.Vector3">
+            <summary>
+            Класс, представляющий трехмерный вектор
+            </summary>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.vectors.Vector3.x">
+            <summary>
+            Значения X, Y и Z
+            </summary>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.vectors.Vector3.y">
+            <summary>
+            Значения X, Y и Z
+            </summary>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.vectors.Vector3.z">
+            <summary>
+            Значения X, Y и Z
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.#ctor">
+            <summary>
+            Конструктор с значениями по умолчанию
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Конструктор с пользовательскими значениями
+            </summary>
+            <param name="x">Значение X</param>
+            <param name="y">Значение Y</param>
+            <param name="z">Значение Z</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.GetX">
+            <summary>
+            Получить значение X
+            </summary>
+            <returns>Значение X</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.SetX(System.Int32)">
+            <summary>
+            Установить пользовательское значение X
+            </summary>
+            <param name="x">Новое значение X</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.GetY">
+            <summary>
+            Получить значение Y
+            </summary>
+            <returns>Значение Y</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.SetY(System.Int32)">
+            <summary>
+            Установить пользовательское значение Y
+            </summary>
+            <param name="y">Новое значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.GetZ">
+            <summary>
+            Получить значение Z
+            </summary>
+            <returns>Значение Z</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.SetZ(System.Int32)">
+            <summary>
+            Установить пользовательское значение Z
+            </summary>
+            <param name="z">Новое значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Add(org.ReStudios.utitlitium.vectors.Vector3)">
+            <summary>
+            Сложить значения с другим вектором
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Add(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Сложить значения с прямыми значениями
+            </summary>
+            <param name="x">Добавить значение X</param>
+            <param name="y">Добавить значение Y</param>
+            <param name="z">Добавить значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Add(System.Int32)">
+            <summary>
+            Сложить значения с 1 значением.
+            Добавить значение ко всем значениям вектора.
+            Например: Представим, что у нас есть вектор со значениями 5, 8 и 10,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 7, 10 и 12
+            </summary>
+            <param name="add">Значение для добавления</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Sub(org.ReStudios.utitlitium.vectors.Vector3)">
+            <summary>
+            Вычесть значения из другого вектора
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Sub(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Вычесть значения из прямых значений
+            </summary>
+            <param name="x">Вычесть значение X</param>
+            <param name="y">Вычесть значение Y</param>
+            <param name="z">Вычесть значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Sub(System.Int32)">
+            <summary>
+            Вычесть значения из 1 значения.
+            Вычесть значение из всех значений вектора.
+            Например: Представим, что у нас есть вектор со значениями 5, 8 и 10,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 3, 6 и 8
+            </summary>
+            <param name="sub">Значение для вычитания</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Mul(org.ReStudios.utitlitium.vectors.Vector3)">
+            <summary>
+            Умножить значения на другой вектор
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Mul(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Умножить значения на прямые значения
+            </summary>
+            <param name="x">Умножить значение X</param>
+            <param name="y">Умножить значение Y</param>
+            <param name="z">Умножить значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Mul(System.Int32)">
+            <summary>
+            Умножить значения на 1 значение.
+            Умножить значение на все значения вектора.
+            Например: Представим, что у нас есть вектор со значениями 5, 8 и 10,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 10, 16 и 20
+            </summary>
+            <param name="mul">Значение для умножения</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Div(org.ReStudios.utitlitium.vectors.Vector3)">
+            <summary>
+            Разделить значения на другой вектор
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Div(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Разделить значения на прямые значения
+            </summary>
+            <param name="x">Разделить значение X</param>
+            <param name="y">Разделить значение Y</param>
+            <param name="z">Разделить значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Div(System.Int32)">
+            <summary>
+            Разделить значения на 1 значение.
+            Разделить значение на все значения вектора.
+            Например: Представим, что у нас есть вектор со значениями 4, 8 и 10,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 2, 4 и 5
+            </summary>
+            <param name="div">Значение для деления</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Pow(org.ReStudios.utitlitium.vectors.Vector3)">
+            <summary>
+            Возвести в степень текущий вектор до значений другого вектора
+            (X текущего вектора возводится в степень X значения другого вектора,
+            и так далее с остальными значениями)
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Pow(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Возвести в степень от прямых значений
+            </summary>
+            <param name="x">Степень X</param>
+            <param name="y">Степень Y</param>
+            <param name="z">Степень Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Pow(System.Int32)">
+            <summary>
+            Возвести в степень значения 1.
+            Возвести в степень значение для всех значений вектора.
+            Например: Представим, что у нас есть вектор со значениями 4, 8 и 10,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 16, 64 и 100
+            *Другими словами: x = x^pow*
+            </summary>
+            <param name="pow">Значение для возведения в степень</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Clone">
+            <summary>
+            Клонировать текущий вектор
+            Создаст точно такой же вектор, но как отдельный объект.
+            Это полезно, если вам нужно сохранить значения, если вы их позже измените (например).
+            </summary>
+            <returns>Экземпляр скопированного вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Normalize">
+            <summary>
+            Любой вектор, нормализованный, изменяет только его величину, а не направление.
+            Кроме того, каждый вектор, указывающий в том же направлении, нормализуется к одному и тому же вектору
+            (потому что величина и направление уникальным образом определяют вектор).
+            Другими словами, делит вектор на минимальные значения, которые приводят вектор к "направлению"
+            </summary>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.ToString">
+            <summary>
+            Преобразовать вектор в строку
+            Полезно для отладки
+            </summary>
+            <returns>Преобразованный в строку вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.SerializeToString">
+            <summary>
+            Преобразовать вектор в сериализованную строку
+            Например, для хранения за пределами приложения
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.SerializeToMap">
+            <summary>
+            Преобразовать вектор в словарь
+            Например, для хранения за пределами приложения
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.SerializeToBytes(System.Text.Encoding)">
+            <summary>
+            Преобразовать вектор в массив байтов
+            Например, для хранения за пределами приложения
+            </summary>
+            <param name="charset">Пользовательская кодировка</param>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.SerializeToBytes">
+            <summary>
+            Преобразовать вектор в массив байтов с кодировкой по умолчанию (UTF-8)
+            Например, для хранения за пределами приложения
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.DeserializeFromBytes(System.Byte[])">
+            <summary>
+            Десериализовать массив байтов в класс Vector
+            </summary>
+            <param name="bytes">Массив байтов</param>
+            <returns>Экземпляр вектора</returns>
+            <exception cref="T:org.ReStudios.utitlitium.vectors.DeserializeException">Недопустимое или неправильное значение массива байтов</exception>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.DeserializeFromMap(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Десериализовать список карт в класс Vector
+            </summary>
+            <returns>Экземпляр вектора</returns>
+            <exception cref="T:org.ReStudios.utitlitium.vectors.DeserializeException">Недопустимое или неправильное значение карты или ее значений</exception>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.DeserializeFromString(System.String)">
+            <summary>
+            Десериализовать строку в класс Vector
+            </summary>
+            <returns>Экземпляр вектора</returns>
+            <exception cref="T:org.ReStudios.utitlitium.vectors.DeserializeException">Недопустимое или неправильное строковое значение</exception>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Distance(org.ReStudios.utitlitium.vectors.Vector3)">
+            <summary>
+            Получить расстояние между 2 векторами
+            </summary>
+            <param name="vector">Другой вектор</param>
+            <returns>Расстояние</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3.Length">
+            <summary>
+            Получить длину вектора (Расстояние от начала координат)
+            </summary>
+            <returns>Длина</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:org.ReStudios.utitlitium.vectors.Vector3d.x" -->
+        <!-- Badly formed XML comment ignored for member "F:org.ReStudios.utitlitium.vectors.Vector3d.y" -->
+        <!-- Badly formed XML comment ignored for member "F:org.ReStudios.utitlitium.vectors.Vector3d.z" -->
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.#ctor">
+            <summary>
+            Конструктор по умолчанию
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Конструктор с пользовательскими значениями
+            </summary>
+            <param name="x">Значение X</param>
+            <param name="y">Значение Y</param>
+            <param name="z">Значение Z</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.GetX">
+            <summary>
+            Получить значение X
+            </summary>
+            <returns>Значение X</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.SetX(System.Double)">
+            <summary>
+            Установить пользовательское значение X
+            </summary>
+            <param name="x">Новое значение X</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.GetY">
+            <summary>
+            Получить значение Y
+            </summary>
+            <returns>Значение Y</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.SetY(System.Double)">
+            <summary>
+            Установить пользовательское значение Y
+            </summary>
+            <param name="y">Новое значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.GetZ">
+            <summary>
+            Получить значение Z
+            </summary>
+            <returns>Значение Z</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.SetZ(System.Double)">
+            <summary>
+            Установить пользовательское значение Z
+            </summary>
+            <param name="z">Новое значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Add(org.ReStudios.utitlitium.vectors.Vector3d)">
+            <summary>
+            Сложить значения из другого вектора
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Add(System.Double,System.Double,System.Double)">
+            <summary>
+            Сложить значения из прямых значений
+            </summary>
+            <param name="x">Сложить значение X</param>
+            <param name="y">Сложить значение Y</param>
+            <param name="z">Сложить значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Add(System.Double)">
+            <summary>
+            Сложить значения из 1 значения.
+            Добавить значение ко всем значениям вектора.
+            Например: Представим, что у нас есть вектор со значениями 5, 8 и 10,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 7, 10 и 12
+            </summary>
+            <param name="add">Значение для добавления</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Sub(org.ReStudios.utitlitium.vectors.Vector3d)">
+            <summary>
+            Вычесть значения из другого вектора
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Sub(System.Double,System.Double,System.Double)">
+            <summary>
+            Вычесть значения из прямых значений
+            </summary>
+            <param name="x">Вычесть значение X</param>
+            <param name="y">Вычесть значение Y</param>
+            <param name="z">Вычесть значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Sub(System.Double)">
+            <summary>
+            Вычесть значения из 1 значения.
+            Вычесть значение из всех значений вектора.
+            Например: Представим, что у нас есть вектор со значениями 5, 8 и 10,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 3, 6 и 8
+            </summary>
+            <param name="sub">Значение для вычитания</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Mul(org.ReStudios.utitlitium.vectors.Vector3d)">
+            <summary>
+            Умножить значения на другой вектор
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Mul(System.Double,System.Double,System.Double)">
+            <summary>
+            Умножить значения на прямые значения
+            </summary>
+            <param name="x">Умножить значение X</param>
+            <param name="y">Умножить значение Y</param>
+            <param name="z">Умножить значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Mul(System.Double)">
+            <summary>
+            Умножить значения на 1 значение.
+            Умножить значение на все значения вектора.
+            Например: Представим, что у нас есть вектор со значениями 5, 8 и 10,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 10, 16 и 20
+            </summary>
+            <param name="mul">Значение для умножения</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Div(org.ReStudios.utitlitium.vectors.Vector3d)">
+            <summary>
+            Разделить значения на другой вектор
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Div(System.Double,System.Double,System.Double)">
+            <summary>
+            Разделить значения на прямые значения
+            </summary>
+            <param name="x">Разделить значение X</param>
+            <param name="y">Разделить значение Y</param>
+            <param name="z">Разделить значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Div(System.Double)">
+            <summary>
+            Разделить значения на 1 значение.
+            Разделить значение на все значения вектора.
+            Например: Представим, что у нас есть вектор со значениями 4, 8 и 10,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 2, 4 и 5
+            </summary>
+            <param name="div">Значение для деления</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Pow(org.ReStudios.utitlitium.vectors.Vector3d)">
+            <summary>
+            Возвести в степень текущий вектор до значений другого вектора
+            (X текущего вектора возводится в степень X значения другого вектора,
+            и так далее со всеми остальными значениями)
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Pow(System.Double,System.Double,System.Double)">
+            <summary>
+            Возвести в степень от прямых значений
+            </summary>
+            <param name="x">Степень значения X</param>
+            <param name="y">Степень значения Y</param>
+            <param name="z">Степень значения Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Pow(System.Double)">
+            <summary>
+            Возвести значения в степень 1 значения.
+            Возвести значение во все значения вектора.
+            Например: Представим, что у нас есть вектор со значениями 4, 8 и 10,
+            если мы вызовем этот метод с значением 2,
+            то на выходе мы получим вектор со значениями 16, 64 и 100
+            *Другими словами: x = x^pow*
+            </summary>
+            <param name="pow">Значение для деления</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Clone">
+            <summary>
+            Клонировать текущий вектор
+            Будет создан точно такой же вектор, но как отдельный объект.
+            Это полезно, если вам нужно сохранить значения, если вы их позже измените (например).
+            </summary>
+            <returns>Экземпляр скопированного вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Normalize">
+            <summary>
+            Любой вектор, нормализованный, меняет только свою величину, а не направление.
+            Кроме того, каждый вектор, указывающий в том же направлении, нормализуется до одного и того же вектора
+            (потому что величина и направление уникальным образом определяют вектор).
+            Другими словами, разделяет вектор на минимальные значения, которые приводят вектор к "направлению"
+            </summary>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.ToString">
+            <summary>
+            Преобразовать вектор в строку
+            Полезно для отладки
+            </summary>
+            <returns>Строковый вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.SerializeToString">
+            <summary>
+            Преобразовать вектор в сериализованную строку
+            Например, для хранения за пределами приложения
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.SerializeToMap">
+            <summary>
+            Преобразовать вектор в словарь
+            Например, для хранения за пределами приложения
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.SerializeToBytes(System.Text.Encoding)">
+            <summary>
+            Преобразовать вектор в список байтов
+            Например, для хранения за пределами приложения
+            </summary>
+            <param name="charset">Пользовательский набор символов</param>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.SerializeToBytes">
+            <summary>
+            Преобразовать вектор в список байтов с использованием кодировки по умолчанию (UTF-8)
+            Например, для хранения за пределами приложения
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.DeserializeFromBytes(System.Byte[])">
+            <summary>
+            Десериализовать список байтов в класс Vector
+            </summary>
+            <param name="bytes">Список байтов</param>
+            <returns>Экземпляр вектора</returns>
+            <exception cref="T:org.ReStudios.utitlitium.vectors.DeserializeException">Недопустимое или некорректное значение списка байтов</exception>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.DeserializeFromMap(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Десериализовать список карт в класс Vector
+            </summary>
+            <param name="map">Список карт</param>
+            <returns>Экземпляр вектора</returns>
+            <exception cref="T:org.ReStudios.utitlitium.vectors.DeserializeException">Недопустимое или некорректное значение карты или ее значений</exception>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.DeserializeFromString(System.String)">
+            <summary>
+            Десериализовать строку в класс Vector
+            </summary>
+            <param name="str">Строка</param>
+            <returns>Экземпляр вектора</returns>
+            <exception cref="T:org.ReStudios.utitlitium.vectors.DeserializeException">Недопустимое или некорректное значение строки</exception>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Distance(org.ReStudios.utitlitium.vectors.Vector3d)">
+            <summary>
+            Получить расстояние между 2 векторами
+            </summary>
+            <param name="vector">Другой вектор</param>
+            <returns>Расстояние</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3d.Length">
+            <summary>
+            Получить длину вектора (Расстояние от начала координат)
+            </summary>
+            <returns>Длина</returns>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.vectors.Vector3f.x">
+            <summary>
+            Значения X, Y и Z
+            </summary>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.vectors.Vector3f.y">
+            <summary>
+            Значения X, Y и Z
+            </summary>
+        </member>
+        <member name="F:org.ReStudios.utitlitium.vectors.Vector3f.z">
+            <summary>
+            Значения X, Y и Z
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.#ctor">
+            <summary>
+            Конструктор с значениями по умолчанию
+            </summary>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Конструктор с пользовательскими значениями
+            </summary>
+            <param name="x">Значение X</param>
+            <param name="y">Значение Y</param>
+            <param name="z">Значение Z</param>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.GetX">
+            <summary>
+            Получить значение X
+            </summary>
+            <returns>X значение</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.SetX(System.Single)">
+            <summary>
+            Установить пользовательское значение X
+            </summary>
+            <param name="x">Новое значение X</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.GetY">
+            <summary>
+            Получить значение Y
+            </summary>
+            <returns>Y значение</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.SetY(System.Single)">
+            <summary>
+            Установить пользовательское значение Y
+            </summary>
+            <param name="y">Новое значение Y</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.GetZ">
+            <summary>
+            Получить значение Z
+            </summary>
+            <returns>Z значение</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.SetZ(System.Single)">
+            <summary>
+            Установить пользовательское значение Z
+            </summary>
+            <param name="z">Новое значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Add(org.ReStudios.utitlitium.vectors.Vector3f)">
+            <summary>
+            Добавить значения из другого вектора
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Add(System.Single,System.Single,System.Single)">
+            <summary>
+            Добавить значения из прямых значений
+            </summary>
+            <param name="x">Добавить значение X</param>
+            <param name="y">Добавить значение Y</param>
+            <param name="z">Добавить значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Add(System.Single)">
+            <summary>
+            Добавить значения из 1 значения.
+            Добавить значение ко всем значениям вектора.
+            Например: Представим, что у нас есть вектор со значениями 5, 8 и 10
+            если мы вызовем этот метод со значением 2,
+            то на выходе мы получим вектор со значениями 7, 10 и 12
+            </summary>
+            <param name="add">Значение для добавления</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Sub(org.ReStudios.utitlitium.vectors.Vector3f)">
+            <summary>
+            Вычесть значения из другого вектора
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Sub(System.Single,System.Single,System.Single)">
+            <summary>
+            Вычесть значения из прямых значений
+            </summary>
+            <param name="x">Вычесть значение X</param>
+            <param name="y">Вычесть значение Y</param>
+            <param name="z">Вычесть значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Sub(System.Single)">
+            <summary>
+            Вычесть значения из 1 значения.
+            Вычесть значение из всех значений вектора.
+            Например: Представим, что у нас есть вектор со значениями 5, 8 и 10
+            если мы вызовем этот метод со значением 2,
+            то на выходе мы получим вектор со значениями 3, 6 и 8
+            </summary>
+            <param name="sub">Значение для вычитания</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Mul(org.ReStudios.utitlitium.vectors.Vector3f)">
+            <summary>
+            Умножить значения на другой вектор
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Mul(System.Single,System.Single,System.Single)">
+            <summary>
+            Умножить значения на прямые значения
+            </summary>
+            <param name="x">Умножить значение X</param>
+            <param name="y">Умножить значение Y</param>
+            <param name="z">Умножить значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Mul(System.Single)">
+            <summary>
+            Умножить значения на 1 значение.
+            Умножить значение на все значения вектора.
+            Например: Представим, что у нас есть вектор со значениями 5, 8 и 10
+            если мы вызовем этот метод со значением 2,
+            то на выходе мы получим вектор со значениями 10, 16 и 20
+            </summary>
+            <param name="mul">Значение для умножения</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Div(org.ReStudios.utitlitium.vectors.Vector3f)">
+            <summary>
+            Разделить значения на другой вектор
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Div(System.Single,System.Single,System.Single)">
+            <summary>
+            Разделить значения на прямые значения
+            </summary>
+            <param name="x">Разделить значение X</param>
+            <param name="y">Разделить значение Y</param>
+            <param name="z">Разделить значение Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Div(System.Single)">
+            <summary>
+            Разделить значения на 1 значение.
+            Разделить значение на все значения вектора.
+            Например: Представим, что у нас есть вектор со значениями 4, 8 и 10
+            если мы вызовем этот метод со значением 2,
+            то на выходе мы получим вектор со значениями 2, 4 и 5
+            </summary>
+            <param name="div">Значение для деления</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Pow(org.ReStudios.utitlitium.vectors.Vector3f)">
+            <summary>
+            Возвести текущий вектор в степень значений другого вектора
+            (X текущего вектора возводится в степень значения X другого вектора,
+            и так далее с остальными значениями)
+            </summary>
+            <param name="v">Другой вектор</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Pow(System.Single,System.Single,System.Single)">
+            <summary>
+            Возвести в степень прямые значения
+            </summary>
+            <param name="x">Степень значения X</param>
+            <param name="y">Степень значения Y</param>
+            <param name="z">Степень значения Z</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Pow(System.Single)">
+            <summary>
+            Возвести значения в степень 1 значения.
+            Возвести значение в степень ко всем значениям вектора.
+            Например: Представим, что у нас есть вектор со значениями 4, 8 и 10
+            если мы вызовем этот метод со значением 2,
+            то на выходе мы получим вектор со значениями 16, 64 и 100
+            *Другими словами: x = x^pow*
+            </summary>
+            <param name="pow">Значение для деления</param>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Clone">
+            <summary>
+            Клонировать текущий вектор
+            Будет создан точно такой же вектор, но как отдельный объект.
+            Это полезно, если вам нужно сохранить значения, если вы их позже измените (например).
+            </summary>
+            <returns>Экземпляр скопированного вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Normalize">
+            <summary>
+            Любой вектор, когда он нормализуется, изменяет только свою величину, а не направление.
+            Кроме того, каждый вектор, указывающий в том же направлении, нормализуется до одного и того же вектора
+            (потому что величина и направление уникальным образом определяют вектор).
+            Другими словами, делит вектор на минимальные значения, которые приводят вектор к "направлению"
+            </summary>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.ToString">
+            <summary>
+            Преобразовать вектор в строку
+            Полезно для отладки
+            </summary>
+            <returns>Строковое представление вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.SerializeToString">
+            <summary>
+            Преобразовать вектор в сериализованную строку
+            Например, для хранения за пределами приложения
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.SerializeToMap">
+            <summary>
+            Преобразовать вектор в словарь
+            Например, для хранения за пределами приложения
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.SerializeToBytes(System.Text.Encoding)">
+            <summary>
+            Преобразовать вектор в список байтов
+            Например, для хранения за пределами приложения
+            </summary>
+            <param name="charset">Пользовательский набор символов</param>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.SerializeToBytes">
+            <summary>
+            Преобразовать вектор в список байтов с использованием кодировки по умолчанию (UTF-8)
+            Например, для хранения за пределами приложения
+            </summary>
+            <returns>Сериализованный вектор</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.DeserializeFromBytes(System.Byte[])">
+            <summary>
+            Десериализовать список байтов в класс Vector
+            </summary>
+            <param name="bytes">Список байтов</param>
+            <returns>Экземпляр вектора</returns>
+            <exception cref="T:org.ReStudios.utitlitium.vectors.DeserializeException">Недопустимое или неверное значение списка байтов</exception>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.DeserializeFromMap(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Десериализовать список словарей в класс Vector
+            </summary>
+            <param name="map">Список словарей</param>
+            <returns>Экземпляр вектора</returns>
+            <exception cref="T:org.ReStudios.utitlitium.vectors.DeserializeException">Недопустимое или неверное значение словаря или его значений</exception>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.EserializeFromString(System.String)">
+            <summary>
+            Десериализовать строку в класс Vector
+            </summary>
+            <param name="str">Строка</param>
+            <returns>Экземпляр вектора</returns>
+            <exception cref="T:org.ReStudios.utitlitium.vectors.DeserializeException">Недопустимое или неверное значение строки</exception>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.asVector3">
+            <summary>
+            Получить вектор3
+            </summary>
+            <returns>Экземпляр вектора</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Distance(org.ReStudios.utitlitium.vectors.Vector3f)">
+            <summary>
+            Получить расстояние между 2 векторами
+            </summary>
+            <param name="vector">Другой вектор</param>
+            <returns>Расстояние</returns>
+        </member>
+        <member name="M:org.ReStudios.utitlitium.vectors.Vector3f.Length">
+            <summary>
+            Получить длину вектора (Расстояние от начала координат)
+            </summary>
+            <returns>Длина</returns>
+        </member>
+    </members>
+</doc>

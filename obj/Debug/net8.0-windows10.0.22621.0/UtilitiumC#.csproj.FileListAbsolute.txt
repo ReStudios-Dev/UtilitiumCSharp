@@ -1,0 +1,14 @@
+D:\DevProject\UtilitiumC#\bin\Debug\net8.0-windows10.0.22621.0\UtilitiumC#.deps.json
+D:\DevProject\UtilitiumC#\bin\Debug\net8.0-windows10.0.22621.0\UtilitiumC#.dll
+D:\DevProject\UtilitiumC#\bin\Debug\net8.0-windows10.0.22621.0\UtilitiumC#.pdb
+D:\DevProject\UtilitiumC#\bin\Debug\net8.0-windows10.0.22621.0\UtilitiumC#.xml
+D:\DevProject\UtilitiumC#\obj\Debug\net8.0-windows10.0.22621.0\UtilitiumC#.csproj.AssemblyReference.cache
+D:\DevProject\UtilitiumC#\obj\Debug\net8.0-windows10.0.22621.0\UtilitiumC#.GeneratedMSBuildEditorConfig.editorconfig
+D:\DevProject\UtilitiumC#\obj\Debug\net8.0-windows10.0.22621.0\UtilitiumC#.AssemblyInfoInputs.cache
+D:\DevProject\UtilitiumC#\obj\Debug\net8.0-windows10.0.22621.0\UtilitiumC#.AssemblyInfo.cs
+D:\DevProject\UtilitiumC#\obj\Debug\net8.0-windows10.0.22621.0\UtilitiumC#.csproj.CoreCompileInputs.cache
+D:\DevProject\UtilitiumC#\obj\Debug\net8.0-windows10.0.22621.0\UtilitiumC#.dll
+D:\DevProject\UtilitiumC#\obj\Debug\net8.0-windows10.0.22621.0\refint\UtilitiumC#.dll
+D:\DevProject\UtilitiumC#\obj\Debug\net8.0-windows10.0.22621.0\UtilitiumC#.xml
+D:\DevProject\UtilitiumC#\obj\Debug\net8.0-windows10.0.22621.0\UtilitiumC#.pdb
+D:\DevProject\UtilitiumC#\obj\Debug\net8.0-windows10.0.22621.0\ref\UtilitiumC#.dll
